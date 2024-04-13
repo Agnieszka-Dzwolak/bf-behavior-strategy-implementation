@@ -2,15 +2,29 @@
 
 /* this exercise has 3 distractors */
 
-function removeExclamationMarks(s) {
-  var arr = s.split('');
-  arr = arr.filter(function (e) {
-    return e !== '!';
-  });
-  return arr.join('');
+// function removeExclamationMarks(s) {
+//   var arr = s.split('');
+//   arr = arr.filter(function (e) {
+//     return e !== '!';
+//   });
+//   return arr.join('');
+// }
+
+// arr.filter(function (e) { // distractor
+// var arr = s.join(''); // distractor
+// return arr.split(''); // distractor
+
+function removeExclamationMarks(string) {
+    let newString = '';
+    const array = string.split('');
+
+    array.forEach((element) => {
+        if (element !== '!') {
+            newString += element;
+        }
+    });
+    return newString;
 }
 
-
-arr.filter(function (e) { // distractor
-var arr = s.join(''); // distractor
-return arr.split(''); // distractor
+console.log(removeExclamationMarks('!hel!lo!'));
+console.log(removeExclamationMarks('!!!!!'));

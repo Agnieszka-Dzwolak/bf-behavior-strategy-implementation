@@ -15,3 +15,4 @@ function removeExclamationMarks(s) {
 newString = s[i]; // distractor
 return s; // distractor
 if (s[i] == '!') { // distractor
+  
